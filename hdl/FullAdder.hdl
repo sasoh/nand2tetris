@@ -13,7 +13,6 @@ CHIP FullAdder {
     PARTS:
     HalfAdder(a=b, b=c, sum=halfAdderSumBC, carry=halfAdderCarryBC);
     Not(in=halfAdderSumBC, out=notHalfAdderSumBC);
-    Not(in=halfAdderCarryBC, out=notHalfAdderCarryBC);
     Or(a=b, b=c, out=bOrC);
 
     Mux(a=halfAdderCarryBC, b=bOrC, sel=a, out=carry);
